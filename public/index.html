@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Blockchain Authentication</h1>
+    <form id="register-form">
+        <h2>Register</h2>
+        <input type="email" id="register-email" placeholder="Email" required>
+        <button type="submit">Register</button>
+    </form>
+    <form id="login-form">
+        <h2>Login</h2>
+        <input type="text" id="login-publicKey" placeholder="Public Key" required>
+        <input type="text" id="login-signature" placeholder="Signature" required>
+        <button type="submit">Login</button>
+    </form>
+    <button id="verify-button">Verify Identity</button>
+    <p id="verify-result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
