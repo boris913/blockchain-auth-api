@@ -1,7 +1,7 @@
 // routes/auth.js
 const express = require('express');
 const { body, validationResult } = require('express-validator');
-const { register, login, verify } = require('../controllers/authController');
+const { register, login, verify, getUsers } = require('../controllers/authController');
 const router = express.Router();
 
 router.post('/register', [
@@ -26,5 +26,6 @@ router.post('/login', [
 }, login);
 
 router.get('/verify', verify);
+router.get('/users', getUsers); // Nouvelle route pour afficher les utilisateurs
 
 module.exports = router;

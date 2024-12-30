@@ -68,4 +68,14 @@ const verify = (req, res) => {
   }
 };
 
-module.exports = { register, login, verify };
+const getUsers = async (req, res) => {
+  try {
+    const users = await User.findAll();
+    res.json(users);
+  } catch (err) {
+    console.error('Error fetching users:', err.message);
+    res.status(500).send('Server error');
+  }
+};
+
+module.exports = { register, login, verify, getUsers };
